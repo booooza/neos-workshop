@@ -1,0 +1,9 @@
+version: "2"
+
+syncs:
+  #IMPORTANT: ensure this name is unique and does not match your other application container name
+  data-sync: #tip: add -sync and you keep consistent names as a convention
+    src: .
+    sync_userid: '0'
+    sync_group: 'root'
+    sync_groupid: '0'

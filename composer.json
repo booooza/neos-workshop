@@ -1,0 +1,45 @@
+{
+    "name": "booooza/neos-workshop",
+    "description": "Repository for the Neos from 0 to 100 Workshop 2019",
+    "license": "GPL-3.0+",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "neos/neos": "~4.3.0",
+        "neos/nodetypes": "~4.3.0",
+        "neos/site-kickstarter": "~4.3.0",
+        "neos/neos-ui": "~3.3",
+        "neos/seo": "~3.0",
+        "neos/fusion-afx": "~1.2",
+        "neos/redirecthandler-neosadapter": "~3.0",
+        "neos/redirecthandler-databasestorage": "~3.0",
+        "neos/setup": "@dev"
+    },
+    "require-dev": {
+        "neos/buildessentials": "@dev",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^7.0",
+        "symfony/css-selector": "~2.0",
+        "neos/behat": "@dev"
+    },
+    "repositories": {
+        "distributionPackages": {
+            "type": "path",
+            "url": "./DistributionPackages/*"
+        }
+    },
+    "replace": {
+        "neos/neos-base-distribution": "4.3.1"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}

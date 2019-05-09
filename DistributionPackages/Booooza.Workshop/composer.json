@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "booooza/workshop",
+    "autoload": {
+        "psr-4": {
+            "Booooza\\Workshop\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Booooza.Workshop"
+        }
+    }
+}

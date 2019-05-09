@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    volumes: 
+      - data-sync:/data:nocopy
+volumes:
+  data-sync:
+    external: true
